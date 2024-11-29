@@ -5,11 +5,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import graphviz
 from pandas import DataFrame
-from sklearn import tree
+from sklearn.dummy import DummyClassifier
 from sklearn import tree
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier 
 import pickle
 
 
@@ -152,7 +152,6 @@ de l'abaissement du tracé électrique du cœur dans un enregistrement.
     # Splitting the dataset into the Training set and Test set
     training_features, test_features, \
         training_target, test_target = train_test_split(X, y, test_size=0.2, random_state=42)
-    from sklearn.dummy import DummyClassifier
 
     # build decision tree model
     DecisionTreeModel = DecisionTreeClassifier(criterion=criterion, random_state=random_state, max_depth=max_depth)
